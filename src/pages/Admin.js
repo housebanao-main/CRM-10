@@ -1,13 +1,13 @@
-import SideNavigation from "../components/SideNavigation";
-import Header from "../components/Header";
-import AdminTable from "../components/AdminTable";
+import SideNavigation from "../components/SideNavigation/SideNavigation";
+import Header from "../components/Header/Header";
+import AdminTable from "../components/Admin/AdminTable";
 
-import styles from "./Admin.module.css";
+import styles from "./Pages.module.css";
 
 const Admin = () => {
 
   return (
-    <div className={styles.dashboard}>
+    <div className={styles.container}>
       <Header />
       <SideNavigation />
       <AdminTable />

@@ -1,13 +1,13 @@
-import SideNavigation from "../components/SideNavigation";
-import Header from "../components/Header";
-import PartnerTable from "../components/PartnerTable";
+import SideNavigation from "../components/SideNavigation/SideNavigation";
+import Header from "../components/Header/Header";
+import PartnerTable from "../components/Partner/PartnerTable";
 
-import styles from "./Customers.module.css";
+import styles from "./Pages.module.css";
 
 const Customers = () => {
 
   return (
-    <div className={styles.dashboard}>
+    <div className={styles.container}>
       <Header />
       <SideNavigation />
       <PartnerTable />

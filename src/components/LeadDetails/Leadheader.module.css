@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;  /* Make header full width */
+    padding: 10px 20px;
+    background-color: #fff;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .back-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 15px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;  /* Ensure tabs take full width */
+    padding: 10px 0;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .tab.active {
+    font-weight: bold;
+    color: #1f5e6c;
+    border-bottom: 2px solid #1f5e6c;
+  }

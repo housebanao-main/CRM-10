@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Cabin",
+        "checked": false,
+        "particulars": "",
+        "particularsOptions": ["Table", "Chair", "Glass", "Cabin", "Cabinet"],
+        "coreMaterial": "",
+        "coreMaterialOptions": ["Wood", "Metal", "Plastic"],
+        "finishMaterial": "",
+        "finishMaterialOptions": ["Laminate", "Polish", "Paint"],
+        "measureType": "Area",
+        "areaQty": "",
+        "cost": "",
+        "totalCosting": ""
+    },
+    {
+        "name": "Cabinet",
+        "checked": false,
+        "particulars": "",
+        "particularsOptions": ["Wood", "Metal", "Plastic"],
+        "coreMaterial": "",
+        "coreMaterialOptions": ["Wood", "Metal", "Plastic"],
+        "finishMaterial": "",
+        "finishMaterialOptions": ["Laminate", "Polish", "Paint"],
+        "measureType": "Area",
+        "areaQty": "",
+        "cost": "",
+        "totalCosting": ""
+    },
+    {
+        "name": "POP",
+        "checked": false,
+        "particulars": "",
+        "particularsOptions": ["Plaster", "Concrete"],
+        "coreMaterial": "",
+        "coreMaterialOptions": ["Plaster", "Concrete"],
+        "finishMaterial": "",
+        "finishMaterialOptions": ["Smooth Finish", "Textured Finish"],
+        "measureType": "Area",
+        "areaQty": "",
+        "cost": "",
+        "totalCosting": ""
+    }
+]

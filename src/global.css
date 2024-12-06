@@ -81,3 +81,33 @@ input[type="file"]::file-selector-button:hover {
 input[type="file"]::file-selector-button:focus {
   border-color: var(--color-black);
 }
+
+input[type="text"], input[type="email"], input[type="tel"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;  
+}
+
+input[type="password"] {
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 90%;
+}

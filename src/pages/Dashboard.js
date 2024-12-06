@@ -1,18 +1,16 @@
-import SideNavigation from "../components/SideNavigation";
-import Header from "../components/Header";
-import GraphCustomer from "../components/GraphCustomer";
-import CustomerTable from "../components/CustomerTable";
+import SideNavigation from "../components/SideNavigation/SideNavigation";
+import Header from "../components/Header/Header";
+import CustomerTable from "../components/Customer/CustomerTable";
 
-import styles from "./Dashboard.module.css";
+import styles from "./Pages.module.css";
 
 const Dashboard = () => {
 
 
   return (
-    <div className={styles.dashboard}>
+    <div className={styles.container}>
       <Header />
       <SideNavigation />
-      <GraphCustomer />
       <CustomerTable />
     </div>
   );

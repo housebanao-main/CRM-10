@@ -1,0 +1,330 @@
+.quotationFormContainer {
+    width: 80%;
+    float: right;
+    right: 50px;
+    overflow-x: auto;
+    position: absolute;
+    top: 65px;
+}
+
+.progressTracker {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.progressStep {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    color: #1f5e6d;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.progressStep:hover {
+    color: #1a4c58;
+    border-bottom: 2px solid #1a4c58;
+}
+
+.activeStep {
+    border-bottom: 2px solid #1f5e6d;
+    font-weight: bold;
+    color: #1f5e6d;
+}
+
+.formContent {
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.formRow {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.formRow div {
+    width: 32%; /* Ensures three items per row without overlapping */
+    display: flex;
+    flex-direction: column;
+}
+
+.formRow label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.formRow input,
+.formRow select {
+    width: 90% !important;
+    padding: 12px !important;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.formRow input[type=number] {
+    width: 84% !important;
+}
+
+.formRow input[type=date] {
+    width: 84% !important;
+}
+
+.formRow input:focus,
+.formRow select:focus {
+    border-color: #1f5e6d;
+}
+
+.formNavigation {
+    text-align: right;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #1f5e6d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button:first-child {
+  margin-left: 0px;
+}
+
+button:hover {
+    background-color: #144b58;
+}
+
+.createForSection {
+    margin-bottom: 20px;
+}
+
+.optionsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.optionButton {
+    padding: 10px 20px;
+    border: 1px solid #1f5e6d;
+    background-color: transparent; /* No background by default */
+    color: #1f5e6d;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width: 20%; /* To make the buttons fit well within a row */
+    text-align: center;
+}
+
+.optionButton:hover {
+    background-color: #0c1c20;
+    color: #fff;
+}
+
+.activeOption {
+    background-color: #1b2b2f; /* Fill color when selected */
+    color: #fff;
+}
+
+.optionButton:not(.activeOption):hover {
+    background-color: #e6e6e6; /* Light grey background on hover */
+}
+
+
+@media (max-width: 768px) {
+    .progressTracker {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .progressStep {
+        padding: 15px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .quotationFormContainer {
+        width: 95%;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    .formRow {
+        flex-direction: column;
+    }
+
+    .formRow div {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 10px;
+    }
+
+    .formNavigation {
+        text-align: center;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* CSS to ensure three inputs per row */
+
+.formRow {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.formRow > * {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.formRow > *:last-child {
+    margin-right: 0;
+}
+
+.specificationItem {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .formRow {
+        flex-direction: column;
+    }
+
+    .formRow > * {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.toggleSwitch {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 60px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.toggleInput {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleSlider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+.toggleSlider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.toggleInput:checked + .toggleSlider {
+    background-color: #1f5e6d;
+}
+
+.toggleInput:checked + .toggleSlider:before {
+    transform: translateX(30px);
+}
+
+label {
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.searchBar {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.paymentDetailsContainer {
+    margin-top: 20px;
+}
+
+.paymentTextarea {
+    width: 100%;              /* Full width of the parent container */
+    height: 200px;             /* Custom height */
+    padding: 10px;             /* Padding for inner spacing */
+    font-size: 16px;           /* Font size for readability */
+    border: 1px solid #ccc;    /* Border styling */
+    border-radius: 5px;        /* Rounded corners */
+    box-sizing: border-box;    /* Ensure padding and border are included in the width and height */
+    resize: vertical;          /* Allow vertical resizing */
+}
+
+.paymentTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.paymentTable th,
+.paymentTable td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    color: #000;
+}
+
+.paymentTable th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+.paymentInstructions {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.payeeName {
+    font-weight: bold;
+}
+
+.qrInstructions {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}

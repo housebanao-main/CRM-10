@@ -2,16 +2,16 @@ import React, { useEffect } from "react";
 import { Routes, Route, useNavigationType, useLocation } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
-import Signinn from "./pages/Signinn";
 import Customers from "./pages/Customers";
 import Admin from "./pages/Admin";
-import Setting from "./pages/Setting";
 import Partner from "./pages/Partner";
-import Profile from "./pages/Profile";
-import Form from "./pages/Form";
 import Transport from "./pages/Transport";
 import Boq from "./pages/Boq";
+import Creation from "./pages/Creation";
+import Quotation from "./pages/Quotation";
+import Costbreakup from "./components/BoqStructure/Costbreakup/Costbreakup"; // Correct import to match component name
 import Lead from "./pages/Lead";
+import BoqStructure from "./pages/Boqstructure"; // Import BoqStructure here
 import PrivateRoute from './components/PrivateRoute';
 
 function App() {
@@ -38,10 +38,6 @@ function App() {
         title = "Login";
         metaDescription = "Login page";
         break;
-      case "/signinn":
-        title = "Sign In";
-        metaDescription = "Sign In page";
-        break;
       case "/customers":
         title = "Customers";
         metaDescription = "Customers page";
@@ -50,21 +46,9 @@ function App() {
         title = "Admin";
         metaDescription = "Admin page";
         break;
-      case "/setting":
-        title = "Settings";
-        metaDescription = "Settings page";
-        break;
       case "/partner":
         title = "Partners";
         metaDescription = "Partners page";
-        break;
-      case "/profile":
-        title = "Profile";
-        metaDescription = "Profile page";
-        break;
-      case "/form":
-        title = "Form";
-        metaDescription = "Form page";
         break;
       case "/transport":
         title = "Transport";
@@ -74,9 +58,25 @@ function App() {
         title = "Boq";
         metaDescription = "Boq Page";
         break;
+      case "/creation":
+        title = "Creation";
+        metaDescription = "Creation Page";
+        break;
+      case "/quotation":
+        title = "Quotation";
+        metaDescription = "Quotation Page";
+        break;
       case "/lead":
         title = "Lead";
         metaDescription = "Lead Page";
+        break;
+      case "/boqstructure":
+        title = "Boq Structure";
+        metaDescription = "Boq Structure Page"; // Update for BoqStructure
+        break;
+      case "/costbreakup":
+        title = "Cost Breakup";
+        metaDescription = "Cost Breakup Page"; // Correct meta description
         break;
       default:
         title = "App";
@@ -100,16 +100,16 @@ function App() {
     <Routes>
       <Route path="/" element={<PrivateRoute element={Dashboard} requiredRole="user" />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/signinn" element={<Signinn />} />
       <Route path="/customers" element={<PrivateRoute element={Customers} requiredRole="user" />} />
-      <Route path="/setting" element={<PrivateRoute element={Setting} requiredRole="admin" />} />
+      <Route path="/creation" element={<PrivateRoute element={Creation} requiredRole="user" />} />
       <Route path="/admin" element={<PrivateRoute element={Admin} requiredRole="admin" />} />
       <Route path="/partner" element={<PrivateRoute element={Partner} requiredRole="user" />} />
-      <Route path="/profile" element={<PrivateRoute element={Profile} requiredRole="user" />} />
-      <Route path="/form" element={<PrivateRoute element={Form} requiredRole="user" />} />
       <Route path="/transport" element={<PrivateRoute element={Transport} requiredRole="user" />} />
       <Route path="/boq" element={<PrivateRoute element={Boq} requiredRole="user" />} />
+      <Route path="/quotation" element={<PrivateRoute element={Quotation} requiredRole="user" />} />
+      <Route path="/boqstructure" element={<PrivateRoute element={BoqStructure} requiredRole="user" />} />
       <Route path="/lead" element={<PrivateRoute element={Lead} requiredRole="user" />} />
+      <Route path="/costbreakup" element={<PrivateRoute element={Costbreakup} requiredRole="user" />} /> {/* Correct route for Costbreakup */}
     </Routes>
   );
 }

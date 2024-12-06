@@ -1,0 +1,140 @@
+/* Container Styling */
+.container {
+  width: 90%;
+  min-height: 80vh;
+  max-width: 800px;
+  margin-left: 350px;
+  margin-right: 30px;
+
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.heading {
+  font-size: 24px;
+  margin-left: 30px;
+  font-weight: 500;
+  color: #232323;
+}
+
+/* Styling for the add button (plus icon) */
+.addButton {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #1f5e6c;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 10px;
+  margin-right: 30px;
+}
+
+.addIcon {
+  margin-right: 8px;
+}
+
+
+/* Styling for the packages list */
+.packagesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Styling each package box */
+.packageBox {
+  width: 38%; /* Adjusted for 2 items per row */
+  background-color: #FFFFFF;
+  padding: 20px;
+  height: 270px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #9E9E9E;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image inside package box */
+.packageImage {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  
+  margin-bottom: 15px;
+}
+
+/* Details inside package box */
+.packageDetails {
+  text-align: center;
+}
+
+.packageName {
+  font-size: 16px;
+  font-weight: 450;
+  margin-top: 2px;
+}
+
+.packagePrice {
+  font-size: 20px;
+  color: #1f5e6c;
+  margin-top: 4px;
+}
+
+/* Styling for View More button */
+.viewMoreButton {
+  font-size: 16px;
+  color: #1f5e6c;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-top: -20px;
+}
+
+
+
+/* Back button styling */
+.backButton {
+  padding: 16px 12px;
+  background-color: #1f5e6c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 10%;
+  margin-top: 300px;
+  margin-left: 700px;
+}
+
+
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .packagesList {
+    justify-content: center;
+  }
+  
+  .packageBox {
+    width: 100%;
+  }
+}

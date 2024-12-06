@@ -19,17 +19,22 @@
     "console-browserify": "^1.2.0",
     "crypto-browserify": "^3.12.0",
     "dotenv": "^16.4.5",
+    "font-awesome": "^4.7.0",
     "formik": "^2.4.6",
+    "html2canvas": "^1.4.1",
     "html2pdf.js": "^0.10.1",
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
-    "jspdf": "^2.5.1",
+    "jspdf": "^2.5.2",
+    "jspdf-autotable": "^3.8.3",
     "jwt-decode": "^4.0.0",
     "pdf-lib": "^1.17.1",
     "react": "^18.2.0",
+    "react-confetti": "^6.1.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "react-modal": "^3.16.1",
+    "react-pdf": "^9.1.1",
     "react-router-dom": "^6.25.1",
     "react-scripts": "5.0.1",
     "react-to-print": "^2.15.1",
@@ -59,5 +64,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "http://localhost:3002"
 }

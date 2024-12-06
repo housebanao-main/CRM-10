@@ -1,13 +1,13 @@
-import SideNavigation from "../components/SideNavigation";
-import Header from "../components/Header";
-import LeadTable from "../components/LeadTable";
+import SideNavigation from "../components/SideNavigation/SideNavigation";
+import Header from "../components/Header/Header";
+import LeadTable from "../components/Lead/LeadTable";
 
-import styles from "./Customers.module.css";
+import styles from "./Pages.module.css";
 
 const Lead = () => {
 
   return (
-    <div className={styles.dashboard}>
+    <div className={styles.container}>
       <Header />
       <SideNavigation />
       <LeadTable />

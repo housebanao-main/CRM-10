@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    min-width: 100vh;
+  }
+  
+  .mainContent {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .header {
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    font-weight: bold;
+    color: #1f5e6c;
+  }
+  

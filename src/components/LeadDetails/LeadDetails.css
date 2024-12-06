@@ -1,0 +1,769 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+  }
+
+  textarea {
+    font-size: 14px !important;
+  }
+  
+  .details-page {
+    width: 78.5%;
+    float: right;
+    right: 50px;
+    overflow-x: auto;
+    position: absolute;
+    top: 65px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .back-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #1f5e6c;
+  }
+  
+  .edit-button, .edit-button-right {
+    background-color: #e8f0f2;
+    border: 1px solid #1f5e6c;
+    color: #1f5e6c;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-button-right {
+    margin-left: auto;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    background-color: #fff;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .tab.active {
+    border-bottom: 2px solid #1f5e6c;
+  }
+  
+  /* Arrow-shaped progress bar */
+  .arrow-progress-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    padding: 5px; /* Padding inside the border */
+  }
+  
+  .arrow-step {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #dedede; /* Default color */
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    flex: 1; /* Make all arrows equal width */
+    clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%, 5% 50%);
+    margin-right: -2px; /* Slight overlap to hide gaps */
+    z-index: 1;
+    border-left: 1px solid #dedede; /* Border for steps */
+    border-right: 1px solid #dedede; /* Border for steps */
+  }
+  
+  .arrow-step.completed {
+    background-color: #004b6b; /* Completed step background */
+  }
+  
+  .arrow-step.upcoming {
+    background-color: #005f7d; /* Upcoming step color */
+  }
+
+  .arrow-step.filled {
+    background-color: #298050;
+    color: white;
+  }
+  
+  .arrow-step.empty {
+    background-color: #dedede; /* Background empty */
+    color: #2b2b2b; /* Text color for empty step */
+  }
+  
+  .arrow-step.first {
+    border-radius: 0px 0 0 0px; /* Rounded corners on the first step */
+  }
+  
+  .arrow-step.last {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 5% 50%);
+    border-radius: 0 25px 25px 0; /* Rounded corners on the last step */
+  }
+  
+  .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .left-section, .right-section {
+    flex: 1;
+  }
+  
+  /* Details/More Toggle Section */
+  .details-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+  
+  .details-tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #7a7a7a;
+  }
+  
+  .details-tab.active {
+    color: #1f5e6c;
+    font-weight: bold;
+    border-bottom: 2px solid #1f5e6c;
+  }
+  
+  .details-content {
+    padding-top: 10px;
+  }
+
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    font-size: 14px;
+  }
+  
+  .label {
+    font-weight: bold;
+    color: #7a7a7a;
+  }
+  
+  /* Activity Section Styling */
+  .activity-container {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fff;
+  }
+  
+  .activity-tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    min-width: 600px;
+  }
+  
+  .activity-tab {
+    background: none;
+    border-bottom: 2px solid #f3f3f3;
+    cursor: pointer;
+    border-radius: 0px;
+    font-size: 14px;
+    color: #7a7a7a;
+  }
+
+  .activity-tab:hover {
+     color: #fff;
+     border-radius: 0px;
+  }
+  
+  .activity-tab.active {
+    color: #1f5e6c;
+    border-radius: 0px;
+    border-bottom: 2px solid #1f5e6c;
+  }
+  
+  .activity-tab.active:hover {
+    color: #fff;
+    border-radius: 0px;
+  }
+
+  .log-call, .email-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .log-input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .add-button {
+    padding: 10px 20px;
+    background-color: #1f5e6c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  /* Tasks Section Styling */
+  .tasks-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .mark-as-done {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .task-list .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .task-details {
+    flex-grow: 1;
+  }
+  
+  .task-title {
+    font-weight: bold;
+    color: #1f5e6c;
+  }
+  
+  .task-desc {
+    margin: 5px 10px 5px 0px;
+    color: #7a7a7a;
+    text-align: justify;
+    width: 400px;
+  }
+  
+  .task-timestamp {
+    font-size: 12px;
+    color: #7a7a7a;
+  }
+  
+  .task-timestamp.overdue {
+    color: red;
+  }
+  
+  .task-timestamp.upcoming {
+    color: green;
+  }
+  
+  .task-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .task-date {
+    font-weight: bold;
+  }
+  
+  .assigned-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+  
+  /* Key Details Section */
+  .key-details-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .key-details-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .key-details-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .key-details-list li span {
+    color: #1f5e6c;
+    font-weight: bold;
+  }
+  
+    /* Activity Timeline Section */
+    .activity-timeline {
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+      }
+      
+      .timeline-list {
+        list-style-type: none;
+        padding: 0;
+      }
+      
+      .timeline-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      
+      .timeline-content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13.5px;
+      }
+      
+      .timeline-icon {
+        color: #1f5e6c;
+        font-size: 18px;
+      }
+      
+      .avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+      
+      .timeline-user {
+        font-weight: bold;
+        color: #1f5e6c;
+      }
+      
+      .timeline-time {
+        color: #7a7a7a;
+      }
+      
+      .timeline-toggle {
+        background: none;
+        border: none;
+        color: #1f5e6c;
+        cursor: pointer;
+        padding: 5px 0;
+        font-weight: bold;
+      }
+      
+      .test-fit-out-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 20px;
+      }
+      
+      .upload-section {
+        width: 30%;
+        background-color: #f5f5f5;
+        border: 2px dashed #b0b0b0;
+        padding: 50px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .file-drop-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      
+      .upload-icon {
+        font-size: 50px;
+        color: #d0ceff;
+        margin-bottom: 10px;
+      }
+      
+      .upload-button {
+        background-color: #847dff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      
+      .basic-info {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .basic-info h3 {
+        margin-bottom: 10px;
+      }
+      
+      .input-field {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      
+      .save-button {
+        background-color: #1f5e6c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .new-task-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-row {
+  display: flex;
+  gap: 10px;
+}
+
+.log-input {
+  width: 100%;
+  padding: 10px !important;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+textarea.log-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.add-button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #1f5e6c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.add-button:hover {
+  background-color: #174953;
+}
+
+.wide-button {
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.meeting-textarea {
+  border: none;
+  padding: 0px;
+}
+
+/* Updated CSS for the new task form layout */
+.new-task-form {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.task-row input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+textarea.log-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  resize: none;
+}
+
+.add-button {
+  padding: 12px;
+  margin-top: 0px !important;
+  background-color: #1f5e6c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 140px;
+  font-size: 16px;
+}
+
+.add-button:hover {
+  background-color: #174953;
+}
+
+.small-text {
+  font-size: 12px;
+  color: #666; /* Make the text lighter */
+  margin-top: 5px;
+}
+
+.task-item {
+  padding: 10px 0px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.task-meta {
+  display: flex;
+  align-items: center;
+}
+
+.task-date {
+  font-size: 14px;
+  color: #565656;
+}
+
+.assigned-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.task-timestamp.overdue {
+  color: red;
+}
+
+.task-timestamp.upcoming {
+  color: green;
+}
+
+/* Add this CSS for error handling */
+.log-input.error, .log-textarea.error {
+  border: 1px solid red;
+}
+
+/* General timeline styling */
+.activity-timeline {
+  margin: 20px 0;
+}
+
+.timeline-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.timeline-item {
+  margin-bottom: 15px;
+}
+
+.timeline-content {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.task-summary {
+  display: flex;
+  align-items: center;
+}
+
+.timeline-icon {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 10px;
+  transition: transform 0.3s ease; /* Smooth transition for arrow rotation */
+}
+
+.arrow-right {
+  transform: rotate(0deg); /* Arrow points to the right by default */
+}
+
+.arrow-down {
+  transform: rotate(90deg); /* Arrow points down when expanded */
+}
+
+.default-task-title {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Style for task details when expanded */
+.task-details-expanded {
+  width: 100%; /* Ensure the expanded content takes full width */
+  padding-left: 25px; /* Indent the task title */
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.task-title {
+  font-weight: normal;
+  color: #666;
+  font-weight: 700;
+}
+
+/* Avatar and other styles */
+.avatar {
+  border-radius: 50%;
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.timeline-user {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.timeline-time {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.timeline-toggle {
+  background-color: transparent;
+  border: none;
+  color: #1f5e6c;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.completed-step {
+  background-color: green;
+}
+
+.details-container {
+  margin: 20px;
+}
+
+.details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.details-tab {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.details-tab.active {
+  font-weight: bold;
+  border-bottom: 2px solid #1f5e6c;
+}
+
+.edit-button-right {
+  background-color: #1f5e6c;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.details-content {
+  margin-top: 20px;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Animated input styles */
+.animated-input {
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 5px 0px;
+  transition: all 0.3s ease; /* Smooth transition for padding and border */
+  outline: none;
+}
+
+.animated-input:focus {
+  border-bottom: 2px solid lightgrey;
+  padding: 5px 0; /* Slight change in padding when focused */
+  background-color: transparent;
+}
+
+.animated-input:focus::placeholder {
+  color: grey;
+}
+
+.animated-input::placeholder {
+  transition: color 0.3s ease;
+}

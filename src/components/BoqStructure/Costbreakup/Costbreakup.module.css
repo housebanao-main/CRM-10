@@ -1,0 +1,69 @@
+:root {
+  --primary-color: #1f5e6c;
+  --secondary-color: #1F5E6C;
+  --text-color: #333;
+}
+
+.container {
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.costTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.costTable th, .costTable td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.submitButton {
+  padding: 10px 20px;
+  background-color: #1f5e6c;
+  color: white;
+  border: none;
+  margin-left: 1280px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.submitButton:hover {
+  background-color: #174b55;
+}
+.greyInput {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  width: 100%; /* Ensures inputs are of the same width */
+  padding: 8px;
+  font-size: 14px;
+  box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  .costTable {
+    font-size: 14px;
+  }
+}
+
+.structureContainer {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.structureContainer h3 {
+  color: #1f5e6c;
+}

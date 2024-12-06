@@ -1,0 +1,149 @@
+.boqTwoForm {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.boqTwoHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.boqTwoLeftHeader {
+  display: flex;
+  align-items: center;
+}
+
+.boqTwoBackIcon {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.boqTwoHeadingText {
+  font-size: 24px;
+  font-weight: 500;
+  color: #232323;
+  margin-left: 20px;
+}
+
+.boqTwoAddButton {
+  background: none;
+  border: none;
+  color: #1f5e6c;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+.boqTwoInputRow {
+  display: flex;
+  justify-content: flex-end;  /* Align items to the right */
+  margin-bottom: 20px;
+}
+
+.boqTwoInputGroup {
+  flex: 1;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+.boqTwoTextArea{
+  width: 98%;
+  padding: 14px;
+  color: #9E9E9E;
+  border: 1px solid #9E9E9E;
+  margin-top: 3px;
+  border-radius: 10px;
+  height: 150px;
+  box-sizing: border-box;
+}
+
+.boqTwoInput,
+
+input[type="file"] {
+  width: 100%;
+  padding: 14px;
+  color: #9E9E9E;
+  border: 1px solid #9E9E9E;
+  margin-top: 3px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+
+
+.boqTwoLabel,
+.boqTwoLabels {
+  font-size: 16px;
+  font-weight: 500;
+  color: #232323;
+  margin-bottom: 5px;
+  margin-left: 4px;
+  display: block;
+}
+.boqTwoSaveButton {
+  padding: 12px 20px;
+  background-color: #1f5e6c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: auto;
+  margin-left: auto;  /* Push the button to the right */
+  margin-right: 15px;  /* Ensure no margin on the right side */
+}
+
+
+
+/* Additional specific styling for file input */
+input[type="file"] {
+  padding: 8px;
+  color: #9E9E9E;
+  border: 1px solid #9E9E9E;
+  background-color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* Remove focus outlines for better consistency */
+input:focus, textarea:focus, input[type="file"]:focus {
+  outline: none;
+  border-color: #1f5e6c;
+}
+.boqTwoAddItemButton {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.boqTwoAddButton {
+  background: none;
+  border: none;
+  color: #1f5e6c;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.boqTwoSaveButton {
+  padding: 12px 20px;
+  background-color: #1f5e6c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: auto;
+  margin-left: auto;
+  margin-right: 15px;
+}
+
